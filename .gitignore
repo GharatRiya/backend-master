@@ -1,0 +1,85 @@
+# ==========================================
+# Django & Python Core Neglects
+# ==========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Django specific artifacts
+*.log
+*.pot
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media and Static directories (User uploads should not be tracked)
+media/
+staticfiles/
+static_root/
+
+# ==========================================
+# Environments and Secrets
+# ==========================================
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variable configuration files
+.env
+*.env
+.env.local
+.env.*.local
+
+# ==========================================
+# Packaging and Distributions
+# ==========================================
+dmp.db
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.installed.cfg
+*.egg-info/
++manifest
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg
+
+# ==========================================
+# Testing and Code Quality
+# ==========================================
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ==========================================
+# IDEs, Editors, and OS Files
+# ==========================================
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains (PyCharm, IntelliJ, etc.)
+.idea/
+
+# Operating System files
+.DS_Store
+Thumbs.db

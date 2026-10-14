@@ -1,0 +1,82 @@
+# ==============================================================================
+# Django Specific
+# ==============================================================================
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static_root/
+
+# ==============================================================================
+# Python & Environments
+# ==============================================================================
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+*.env
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ==============================================================================
+# Testing & Code Quality
+# ==============================================================================
+.tox/
+.coverage
+.coverage.*
+.cache
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ==============================================================================
+# Editors & IDEs
+# ==============================================================================
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# ==============================================================================
+# Operating System Files
+# ==============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
