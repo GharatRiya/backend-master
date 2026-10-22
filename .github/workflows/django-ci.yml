@@ -1,5 +1,5 @@
 
-name: Django CI
+name: Django CI/CD
 
 on:
   push:
@@ -29,3 +29,22 @@ jobs:
 
       - name: Run Django tests
         run: python manage.py test
+
+  deploy:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Upload Django code to EC2 staging
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
+          source: "apps/,config/,scripts/,manage.py,requirements.txt"
+          target: ${{ secrets.EC2_DEPLOY_PATH }}
+          overwrite: true
